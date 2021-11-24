@@ -1,0 +1,986 @@
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: "Lato", sans-serif;
+}
+
+body *:not(.fab) {
+   margin-bottom: 2rem;
+}
+
+/* BTN 2 */
+.btn--2 {
+   font-size: 5rem;
+   font-family: sans-serif;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 6px solid black;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn--2::before {
+   content: "";
+   position: absolute;
+   background-color: yellow;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 150%;
+   z-index: -1;
+   transform-origin: bottom left;
+   transform: rotate(-90deg);
+   transition: transform 1s;
+}
+
+.btn--2:hover::before {
+   transform: rotate(0deg);
+}
+
+/* BTN 3 */
+.btn--3 {
+   font-size: 5rem;
+   font-family: sans-serif;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 6px solid black;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn--3::before {
+   content: "";
+   position: absolute;
+   background-color: purple;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   transition: transform 1s;
+   transform: translateX(-100%);
+}
+
+.btn--3:hover::before {
+   transform: translateX(0);
+}
+
+/* BTN 4 */
+.btn--4 {
+   color: black;
+   font-size: 5rem;
+   font-family: sans-serif;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 6px solid black;
+   position: relative;
+   overflow: hidden;
+   transition: color 1s;
+}
+
+.btn--4::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   z-index: -1;
+   transform: rotateX(90deg);
+   transition: transform 1s;
+}
+
+.btn--4:hover::before {
+   transform: rotateX(0deg);
+}
+
+.btn--4::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   z-index: -1;
+   transform: rotateY(90deg);
+   transition: transform 1s;
+}
+
+.btn--4:hover::after {
+   transform: rotateX(0deg);
+}
+
+.btn--4:hover {
+   color: white;
+}
+
+/* BTN 5 */
+.btn--5 {
+   color: orangered;
+   text-transform: uppercase;
+   font-weight: 100;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 3px solid orangered;
+   position: relative;
+   overflow: hidden;
+   transition: all 0.5s;
+}
+
+.btn--5:hover {
+   font-weight: 400;
+   letter-spacing: 1.5rem;
+   border-width: 10px;
+}
+
+/* BTN 6 */
+.btn--6 {
+   color: orangered;
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 3px solid orangered;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn--6::before {
+   content: "Yeah!";
+   text-transform: uppercase;
+   background-color: rgb(156, 255, 169);
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   transform: translateY(-100%);
+   transition: all 0.5s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.btn--6:hover::before {
+   transform: translateY(0);
+}
+
+/* BTN 7 */
+.btn--7 {
+   color: white;
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 12px solid rgb(0, 255, 242);
+   position: relative;
+   overflow: hidden;
+   background-color: rgb(83, 77, 77);
+}
+
+.btn--7:hover {
+   background-color: orangered;
+}
+
+.btn--7::before {
+   content: "";
+   position: absolute;
+   background-color: white;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   transform: translate(-100%, 100%) rotate(45deg);
+   transition: all 0.3s;
+}
+
+.btn--7:hover::before {
+   transform: translateX(100%) rotate(45deg);
+}
+
+/* BTN 8 */
+.btn--8 {
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 6px solid black;
+   position: relative;
+   overflow: hidden;
+   background-color: rgb(255, 255, 101);
+   color: transparent;
+}
+
+.btn--8::before {
+   content: "Hover Me";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgb(255, 255, 101);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.5s;
+   color: black;
+}
+
+.btn--8::after {
+   content: "Hover Me";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgb(255, 255, 101);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.5s;
+   transform: translate(-100%, 100%);
+   color: black;
+}
+
+.btn--8:hover::before {
+   transform: translate(100%, -100%);
+}
+.btn--8:hover::after {
+   transform: translate(0, 0);
+}
+
+/* BTN 9 */
+.btn--9 {
+   color: black;
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 6px solid black;
+   position: relative;
+   overflow: hidden;
+   background-color: white;
+}
+
+.btn--9::before {
+   content: "Hover Me";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: black;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: scale(5);
+   opacity: 0;
+   transition: all 0.5s;
+}
+
+.btn--9:hover::before {
+   opacity: 1;
+   transform: scale(1);
+}
+
+/* BTN 10 */
+.btn--10 {
+   color: orangered;
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   border: 3px solid orangered;
+   position: relative;
+   overflow: hidden;
+   transition: all 0.5s;
+}
+
+.btn--10::before {
+   content: "";
+   position: absolute;
+   height: 0%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 0 0 50% 50%;
+   background-color: orangered;
+   transition: all 0.5s;
+   z-index: -1;
+}
+
+.btn--10:hover {
+   color: white;
+}
+
+.btn--10:hover::before {
+   border-radius: 0;
+   height: 190%;
+}
+
+/* BTN 11 */
+.btn--11 {
+   color: white;
+   background-color: rgb(238, 218, 39);
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn--11::before {
+   content: "button";
+   position: absolute;
+   text-transform: uppercase;
+   background-color: rgb(108, 243, 108);
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transform: rotateX(270deg);
+   transform-origin: top;
+   transition: all 0.5s;
+   transition-delay: 0.3s;
+}
+
+.btn--11:hover::before {
+   transform: rotateX(0);
+}
+
+.btn--11::after {
+   content: "button";
+   position: absolute;
+   text-transform: uppercase;
+   background-color: red;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transform: rotateX(270deg);
+   transform-origin: top;
+   transition: all 0.5s;
+   transition-delay: 0.6s;
+}
+
+.btn--11:hover::after {
+   transform: rotateX(0);
+}
+
+/* BTN 12 */
+.btn--12 {
+   color: transparent;
+   border: 6px solid rgb(238, 218, 39);
+   text-transform: uppercase;
+   font-size: 5rem;
+   font-family: "roboto";
+   letter-spacing: -2px;
+   padding: 5rem 8rem;
+   text-decoration: none;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn--12::before {
+   content: "button";
+   text-transform: uppercase;
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(97, 97, 97);
+   z-index: -1;
+   color: rgb(238, 218, 39);
+   transform: scale(0) rotateY(0deg);
+   transition: all 0.5s;
+   opacity: 0;
+}
+
+.btn--12::after {
+   content: "button";
+   text-transform: uppercase;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(97, 97, 97);
+   z-index: -1;
+   color: rgb(238, 218, 39);
+   transition: all 0.5s;
+   opacity: 1;
+}
+
+.btn--12:hover::before {
+   transform: scale(1) rotateY(360deg);
+   opacity: 1;
+   left: 0;
+}
+.btn--12:hover::after {
+   left: 100%;
+   transform: scale(0) rotateY(360deg);
+   opacity: 0;
+}
+
+/* Menu 1 */
+.menu-1 {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   list-style-type: none;
+}
+
+.menu-1 li a {
+   display: block;
+   width: 120px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   color: #262626;
+   text-transform: capitalize;
+   text-decoration: none;
+   position: relative;
+   transition: all 0.5s;
+}
+
+.menu-1 li a span {
+   position: absolute;
+   width: 25%;
+   height: 100%;
+   background-color: #262626;
+   z-index: -1;
+   left: 0;
+   top: 0;
+   transform: scaleY(0);
+   transition: all 0.5s;
+   transform-origin: top;
+}
+
+.menu-1 li a span:nth-child(2) {
+   left: 25%;
+   transition-delay: 0.15s;
+}
+
+.menu-1 li a span:nth-child(3) {
+   left: 50%;
+   transition-delay: 0.3s;
+}
+
+.menu-1 li a span:nth-child(4) {
+   left: 75%;
+   transition-delay: 0.45s;
+}
+
+.menu-1 li a:hover span {
+   transform: scaleY(1);
+}
+
+.menu-1 li a:hover {
+   color: white;
+}
+
+/* Image Caption 1 */
+.image-caption-1 {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+}
+
+.image-caption-1 img {
+   width: 100%;
+   transition: all 0.5s;
+}
+
+.image-caption-1 .caption {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   opacity: 0;
+   transition: all 0.5s;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.image-caption-1 .caption h1 {
+   text-transform: uppercase;
+   margin: 0;
+}
+
+.image-caption-1 .caption p {
+   font-size: 14px;
+   text-transform: capitalize;
+}
+
+.image-caption-1:hover .caption {
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 1;
+}
+
+.image-caption-1:hover img {
+   transform: rotate(15deg) scale(1.3);
+}
+
+/* Image Caption 2 */
+.image-caption-2 {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+}
+
+.image-caption-2 img {
+   width: 100%;
+   transition: all 0.5s;
+}
+
+.image-caption-2 h1 {
+   text-transform: uppercase;
+}
+
+.image-caption-2 .caption {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   opacity: 0;
+   transition: all 0.5s;
+   transform: translateX(-100%);
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.image-caption-2:hover .caption {
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.image-caption-2:hover img {
+   transform: rotate(-15deg) scale(1.3);
+}
+
+/* Image Caption 3 */
+.image-caption-3 {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+}
+
+.image-caption-3 h1 {
+   text-transform: uppercase;
+}
+
+.image-caption-3 img {
+   width: 100%;
+   transition: all 0.5s;
+}
+
+.image-caption-3 .caption {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   transition: all 0.5s;
+   transform: translateX(-100%);
+   background-color: black;
+}
+
+.image-caption-3:hover .caption {
+   transform: translateX(0);
+}
+
+.image-caption-3:hover img {
+   transform: translateX(100%);
+}
+
+/* Image Caption 4 */
+.image-caption-4 {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+}
+
+.image-caption-4 h1 {
+   text-transform: uppercase;
+}
+
+.image-caption-4 img {
+   width: 100%;
+   transition: all 0.5s;
+}
+
+.image-caption-4 .caption {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 30%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   transition: all 0.5s;
+   transform: translateY(130%);
+   background-color: black;
+}
+
+.image-caption-4:hover .caption {
+   transform: translateY(20%);
+}
+
+.image-caption-4:hover img {
+   transform: translateY(-30%);
+}
+
+/* Image Caption 5 */
+.image-caption-5 {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+}
+
+.image-caption-5 h1 {
+   text-transform: uppercase;
+}
+
+.image-caption-5 .caption {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   transition: all 0.3s;
+   transform: translateY(-20px);
+   color: transparent;
+   z-index: 10;
+}
+
+.image-caption-5 .caption p {
+   transition: all 0.3s;
+   padding: 2px 12px;
+   background-color: rgba(241, 171, 41, 0);
+}
+
+.image-caption-5:hover .caption {
+   transform: translateY(0);
+   transition-delay: 0.3s;
+   color: white;
+}
+
+.image-caption-5:hover .caption p {
+   background-color: rgba(241, 171, 41, 1);
+}
+
+.image-caption-5 .caption::before {
+   content: "";
+   background-color: #006266;
+   opacity: 0.5;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   transition: all 0.25s;
+   transform: translateY(100%);
+   transition-delay: 0.25s;
+}
+
+.image-caption-5:hover .caption::before {
+   transform: translateY(0);
+   transition-delay: 0s;
+}
+
+/* Smoky Effect */
+.smoky-effect {
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.smoky-effect li {
+   list-style: none;
+   font-size: 100px;
+   font-weight: bold;
+   letter-spacing: 10px;
+   transition: 2s;
+}
+
+.smoky-effect:hover li {
+   transform: rotate(45deg) translateY(-200px);
+   opacity: 0;
+   filter: blur(20px);
+}
+
+.smoky-effect li:nth-child(1) {
+   transition-delay: 0;
+}
+
+.smoky-effect li:nth-child(2) {
+   transition-delay: 0.4s;
+}
+
+.smoky-effect li:nth-child(3) {
+   transition-delay: 0.8s;
+}
+
+.smoky-effect li:nth-child(4) {
+   transition-delay: 1.2s;
+}
+
+.smoky-effect li:nth-child(5) {
+   transition-delay: 1.6s;
+}
+
+/* Text Effect Hover */
+.text-effect-hover {
+   text-transform: uppercase;
+   font-size: 100px;
+   position: relative;
+   color: #ccc;
+}
+
+.text-effect-hover::before {
+   content: "text";
+   position: absolute;
+   width: 0;
+   top: 0;
+   left: 0;
+   color: #262626;
+   overflow: hidden;
+   transition: all 0.5s;
+}
+
+.text-effect-hover:hover::before {
+   width: 100%;
+}
+
+/* Rotate Girl */
+.rotate-girl-container {
+   overflow: hidden;
+   width: 300px;
+   height: 400px;
+   border: 10px solid rgb(185, 185, 185);
+}
+img.rotate-girl {
+   width: 100%;
+   transition: 2s all;
+}
+
+img.rotate-girl:hover {
+   transform: rotate(20deg) scale(2);
+}
+
+/* Hover Menu Effect */
+.menu-hover-effect {
+   display: flex;
+   list-style: none;
+   font-size: 24px;
+   padding: 0;
+}
+
+.menu-hover-effect li {
+   text-transform: capitalize;
+   padding: 10px 20px;
+   cursor: pointer;
+   position: relative;
+}
+
+.menu-hover-effect li::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: black;
+   height: 2px;
+   /* width: 0; */
+   width: 100%;
+   transform-origin: right;
+   transition: all 0.7s;
+   transform: scaleX(0);
+}
+
+.menu-hover-effect li::after {
+   content: "";
+   position: absolute;
+   background-color: black;
+   height: 2px;
+   /* width: 0; */
+   width: 100%;
+   transform-origin: left;
+   bottom: 0;
+   left: 0;
+   transition: all 0.7s;
+   transform: scaleX(0);
+}
+
+.menu-hover-effect li:hover::before,
+.menu-hover-effect li:hover::after {
+   /* width: 100%; */
+   transform: scaleX(1);
+}
+
+/* Hover Menu Effect 2*/
+.menu-hover-effect-2 {
+   display: flex;
+   list-style: none;
+   font-size: 24px;
+   padding: 0;
+}
+
+.menu-hover-effect-2 li {
+   text-transform: uppercase;
+   padding: 10px 20px;
+   cursor: pointer;
+   position: relative;
+   transition: all 0.5s;
+   margin: 4px;
+}
+.menu-hover-effect-2 li::before {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 12px;
+   height: 12px;
+   border-left: 3px solid rgb(255, 78, 108);
+   border-bottom: 3px solid rgb(255, 78, 108);
+   opacity: 0;
+   transition: all 0.5s;
+}
+.menu-hover-effect-2 li::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 12px;
+   height: 12px;
+   border-top: 3px solid rgb(255, 78, 108);
+   border-right: 3px solid rgb(255, 78, 108);
+   opacity: 0;
+   transition: all 0.5s;
+}
+
+.menu-hover-effect-2 li:hover {
+   background-color: rgb(255, 78, 108);
+   color: white;
+}
+
+.menu-hover-effect-2 li:hover::before {
+   opacity: 1;
+   transform: translate(-10px, 10px);
+}
+
+.menu-hover-effect-2 li:hover::after {
+   opacity: 1;
+   transform: translate(10px, -10px);
+}
+
+/* Social Menu */
+.social-menu {
+   display: flex;
+}
+.social-menu a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 80px;
+   width: 80px;
+   background-color: white;
+   border-radius: 24px;
+   box-shadow: 5px 3px 13px 3px rgb(80 80 80 / 30%);
+   margin: 0 12px;
+   text-decoration: none;
+   font-size: 24px;
+   transition: all 0.2s;
+   position: relative;
+   overflow: hidden;
+   color: rgb(0, 216, 180);
+}
+
+.social-menu a i {
+   color: rgb(0, 216, 180);
+   z-index: 1;
+}
+
+.social-menu a:hover {
+   font-size: 28px;
+}
+.social-menu a:hover i {
+   color: white;
+}
+
+.social-menu a::before {
+   content: "";
+   position: absolute;
+   width: 150%;
+   height: 150%;
+   background-color: rgb(0, 216, 180);
+   transform: translate(-80px, 80px) rotate(45deg);
+   transition: all 0.2s;
+   z-index: 0;
+}
+
+.social-menu a:hover::before {
+   transform: translate(0) rotate(45deg);
+}

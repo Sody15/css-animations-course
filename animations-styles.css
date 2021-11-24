@@ -1,0 +1,172 @@
+body {
+   margin: 0;
+   /* margin-top: 25vh; */
+   font-family: "Lato", sans-serif;
+   display: flex;
+   justify-content: center;
+}
+
+.animation-1 {
+   background-color: red;
+   width: 150px;
+   height: 150px;
+   animation: moving 3s both infinite linear alternate 1s;
+   /* animation: moving 3s;
+   animation-fill-mode: both;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-direction: alternate; */
+}
+
+@keyframes moving {
+   0% {
+      transform: translateX(0);
+   }
+   50% {
+      transform: translateX(100vh);
+   }
+   100% {
+      transform: translate(100vh, 50vh);
+   }
+}
+
+/* Floating Text */
+.floating-text-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+.floating-text {
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   font-size: 100px;
+   color: rgb(153, 255, 153);
+   position: relative;
+   animation: floating-text-animation 3s alternate infinite linear;
+}
+
+.floating-text::before {
+   content: "coming soon!";
+   position: absolute;
+   top: 20px;
+   left: 0;
+   color: rgb(243, 243, 243);
+   z-index: -1;
+}
+
+@keyframes floating-text-animation {
+   from {
+      transform: rotate(5deg);
+   }
+   to {
+      transform: rotate(-5deg);
+   }
+}
+
+/* Loading Effect */
+.loading-effect-1-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 500px;
+   width: 500px;
+   perspective: 200px;
+   background-color: rgb(153, 255, 153);
+}
+.loading-effect-1 {
+   background-color: white;
+   height: 100px;
+   width: 100px;
+   border-radius: 12px;
+   animation: loading-effect-1-anim 2s linear infinite;
+}
+
+@keyframes loading-effect-1-anim {
+   0% {
+      transform: rotateY(0deg) rotateX(0deg);
+   }
+   50% {
+      transform: rotateY(180deg) rotateX(0deg);
+   }
+   100% {
+      transform: rotateY(180deg) rotateX(180deg);
+   }
+}
+
+/* Car Driving */
+.car-background {
+   background: url(images/bg.jpg);
+   height: 740px;
+   width: 9886px;
+   background-position: bottom left;
+   background-repeat: no-repeat;
+   animation: driving 10s linear infinite;
+   position: relative;
+}
+
+@keyframes driving {
+   from {
+      background-position: bottom left;
+   }
+   to {
+      background-position: bottom right;
+   }
+}
+
+.car {
+   position: absolute;
+   bottom: -198px;
+   left: 15%;
+   transform: scale(0.5);
+}
+
+.bike {
+   position: absolute;
+   bottom: -148px;
+   left: 40%;
+   transform: scale(0.25);
+}
+
+/* Text switch */
+.text-switch {
+   color: rgb(173, 173, 173);
+   font-size: 50px;
+}
+
+.text-switch span::before {
+   content: "transitions";
+   text-transform: uppercase;
+   color: #1b1464;
+   animation: word-switch 5s infinite;
+}
+
+@keyframes word-switch {
+   0% {
+      content: "transitions";
+   }
+   50% {
+      content: "animations";
+   }
+   100% {
+      content: "transforms";
+   }
+}
+
+/* Image Pattern Animation */
+.pattern-bg {
+   background: url(images/bg-2.png);
+   background-position: 0 0;
+   height: 100vh;
+   width: 100%;
+   animation: scroll-up 2s linear infinite;
+}
+
+@keyframes scroll-up {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: 800px 0px;
+   }
+}
