@@ -1,9 +1,16 @@
 body {
    margin: 0;
-   margin-top: 25vh;
    font-family: "Lato", sans-serif;
    display: flex;
    justify-content: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+body > * {
+   margin-bottom: 100px;
 }
 
 .animation-1 {
@@ -35,7 +42,6 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   height: 100vh;
 }
 .floating-text {
    text-transform: uppercase;
@@ -298,6 +304,7 @@ body {
 }
 
 .heart {
+   margin-top: 150px;
    position: relative;
    width: 100px;
    height: 100px;
@@ -536,7 +543,6 @@ body {
 
 /* Loading Text Animation */
 .loading-text {
-   margin: 0;
    padding: 0;
    display: flex;
 }
