@@ -104,7 +104,7 @@ body > * {
 .car-background {
    background: url(images/bg.jpg);
    height: 740px;
-   width: 9886px;
+   width: 100%;
    background-position: bottom left;
    background-repeat: no-repeat;
    animation: driving 10s linear infinite;
